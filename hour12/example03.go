@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
-func pinger(c chan string) {
-	t := time.NewTicker(1 * time.Second)
+func pinger1(c chan string) {
+	//t := time.NewTicker(1 * time.Second)
 	for {
 		c <- "ping"
-		<-t.C
+		//<-t.C
 	}
 }
 
